@@ -52,9 +52,11 @@
     bottom: 0
     left: 0
     background-color: rgba(white, 1)
-    transform: rotate(45deg) translate(-270px, 0px)
+    transform: rotate(45deg) translate(-220px, 0px)
     transition: all .3s ease-in-out
     backface-visibility: hidden
+    +large-desktop-up
+      transform: rotate(45deg) translate(-270px, 0px)
 
 
   &:hover img
