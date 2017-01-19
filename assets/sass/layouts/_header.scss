@@ -138,10 +138,11 @@ li.search-wrap {
   padding: 0;
   position: relative;
   top: 1px;
-  transition: all .34s;
+  transition: all .2s ease-in-out;
 
   &.active {
     width: 170px;
+    transition: all .35s ease-in-out;
   }
 }
 .search-icon {
@@ -171,12 +172,12 @@ li.search-wrap {
   left: 15px;
   right: 25px;
   opacity: 0;
-  //transition: all .1s;
+  transition: all .1s;
 
   .search-wrap.active & {
     opacity: 1;
     //width: 170px;
-    //transition: all .34s;
+    transition: all .35s;
   }
 }
 .search-input {

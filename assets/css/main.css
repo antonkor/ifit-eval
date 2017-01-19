@@ -2981,13 +2981,16 @@ li.search-wrap {
   padding: 0;
   position: relative;
   top: 1px;
-  -webkit-transition: all .34s;
-  -o-transition: all .34s;
-  transition: all .34s;
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 li.search-wrap.active {
   width: 170px;
+  -webkit-transition: all .35s ease-in-out;
+  -o-transition: all .35s ease-in-out;
+  transition: all .35s ease-in-out;
 }
 
 .search-icon {
@@ -3021,10 +3024,16 @@ li.search-wrap.active {
   left: 15px;
   right: 25px;
   opacity: 0;
+  -webkit-transition: all .1s;
+  -o-transition: all .1s;
+  transition: all .1s;
 }
 
 .search-wrap.active .search-input-wrap {
   opacity: 1;
+  -webkit-transition: all .35s;
+  -o-transition: all .35s;
+  transition: all .35s;
 }
 
 .search-input {
