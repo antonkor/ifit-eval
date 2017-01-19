@@ -1,0 +1,93 @@
+.cards-wrapper
+
+.card-wrap
+  margin-bottom: 40px
+  padding-right: 11px
+  padding-left: 11px
+  position: relative
+  cursor: pointer
+  overflow: hidden
+
+
+  &::before
+    // display: block
+    // content: ''
+    // width: 0
+    // height: 0
+    // z-index: 1
+    // position: absolute
+    // top: 0
+    // left: 0
+    // border-top: 70px solid red
+    // border-right: 70px solid transparent
+
+
+
+
+.card-img
+  position: relative
+  overflow: hidden
+
+  &::before
+    // display: block
+    // content: ''
+    // position: absolute
+    // z-index: 1
+    // top: 0
+    // right: 0
+    // left: 0
+    // bottom: 0
+    // background: url(../img/run.svg) no-repeat center
+    // background-size: 90px auto
+    // transform: scale(.75)
+    // opacity: 0
+    // transition: all .15s ease-in-out
+
+  &::after
+    display: block
+    content: ''
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background-color: rgba(white, 1)
+    transform: rotate(45deg) translate(-270px, 0px)
+    transition: all .3s ease-in-out
+    backface-visibility: hidden
+
+
+  &:hover img
+    transform: scale(1.05) // kinda cool but adds a small jidder because of % based width
+
+  img
+    display: block
+    width: 100%
+    transition: all .3s ease-in-out
+    backface-visibility: hidden
+
+// not sure what effect is nicer
+.card-wrap:hover
+  .card-img::before
+    opacity: 1
+    transform: scale(1)
+    transition: all .25s ease-in-out
+
+  .card-img::after
+    background-color: rgba(white, .5)
+    transform: rotate(45deg) translate(-270px, 0px) scale(4)
+    // background-color: rgba(white, .5)
+    // transform: rotate(90deg) translate(-270px, 0px) scale(4)
+
+
+.card-caption
+
+.card-heading
+  margin: 10px 0 0
+  font-size: 16px
+  font-weight: 700
+
+.card-tag
+  font-size: 12px
+  letter-spacing: ps-ls-em(25)
+  font-family: $font-secondary

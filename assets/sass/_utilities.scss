@@ -1,0 +1,211 @@
+@import "mixins";
+
+/* ========================================== */
+/* Utility classes */
+/* ======================================== */
+
+// Display helpers 
+@include display("block");
+@include display("inline-block");
+@include display("inline");
+@include display("flex");
+
+@include mq(mobile-only) {
+  @include display-xs("block");
+  @include display-xs("inline-block");
+  @include display-xs("inline");
+  @include display-xs("flex");
+}
+
+@include mq(tablet-up) {
+  @include display-sm("block");
+  @include display-sm("inline-block");
+  @include display-sm("inline");
+  @include display-sm("flex");
+}
+
+@include mq(desktop-up) {
+  @include display-md("block");
+  @include display-md("inline-block");
+  @include display-md("inline");
+  @include display-md("flex");
+}
+
+@include mq(large-desktop-up) {
+  @include display-lg("block");
+  @include display-lg("inline-block");
+  @include display-lg("inline");
+  @include display-lg("flex");
+}
+
+
+// Alignment
+.align-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+// Control spacing
+$i: 0;
+
+@while $i < 65 {
+
+  .mt-#{$i} { margin-top: #{$i}px; }
+  .mb-#{$i} { margin-bottom: #{$i}px; }
+  .mr-#{$i} { margin-right: #{$i}px; }
+  .ml-#{$i} { margin-left: #{$i}px; }
+
+  .pt-#{$i} { padding-top: #{$i}px; }
+  .pb-#{$i} { padding-bottom: #{$i}px; }
+  .pr-#{$i} { padding-right: #{$i}px; }
+  .pl-#{$i} { padding-left: #{$i}px; }
+
+  $i: $i + 5;
+}
+
+
+// No padding
+@include no-padding("left");
+@include no-padding("right");
+@include no-padding("top");
+@include no-padding("bottom");
+@include no-padding("all");
+
+// No margin
+@include no-margin("left");
+@include no-margin("right");
+@include no-margin("top");
+@include no-margin("bottom");
+@include no-margin("all");
+
+
+
+// Padding space
+.padding-xs {
+  padding: 10px 0;
+  @include mq(tablet-up) { }
+}
+.padding-sm {
+  padding: 25px 0;
+  @include mq(tablet-up) { }
+}
+.padding-md {
+  padding: 50px 0;
+  @include mq(tablet-up) { }
+}
+.padding-lg {
+  padding: 100px 0;
+  @include mq(tablet-up) { }
+}
+// Margin space
+.margin-xs {
+  margin: 10px 0;
+  @include mq(tablet-up) { }
+}
+.margin-sm {
+  margin: 25px 0;
+  @include mq(tablet-up) { }
+}
+.margin-md {
+  margin: 50px 0;
+  @include mq(tablet-up) { }
+}
+.margin-lg {
+  margin: 100px 0;
+  @include mq(tablet-up) { }
+}
+
+
+// Max width helpers
+.max-xs {
+  max-width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  @include mq(tablet-up) { max-width: 60%; }
+}
+.max-sm {
+  max-width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  @include mq(tablet-up) { max-width: 70%; }
+}
+.max-md {
+  max-width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  @include mq(tablet-up) { max-width: 80%; }
+}
+.max-lg {
+  max-width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+// Text helpers
+.text-xs  {
+  font-size: 10px !important;
+  @include mq(tablet-up) { }
+}
+.text-sm  {
+  font-size: 14px !important;
+  @include mq(tablet-up) { }
+}
+.text-md  {
+  font-size: 20px !important;
+  @include mq(tablet-up) { }
+}
+.text-lg  {
+  font-size: 30px !important;
+  @include mq(tablet-up) { }
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+
+// Animation delays
+.delay-xxxs { @include animation-delay(.2s); }
+.delay-xxs { @include animation-delay(.35s); }
+.delay-xs { @include animation-delay(.5s); }
+.delay-sm { @include animation-delay(1s); }
+.delay-md { @include animation-delay(1.5s); }
+.delay-lg { @include animation-delay(2s); }
+
+
+
+
+/* Text/ Image Replacement */
+.ir {  
+  display: block;
+  vertical-align: top;
+  position: relative; 
+  border: 0; 
+  text-indent: -999em; 
+  overflow: hidden; 
+  background-color: transparent; 
+  background-repeat: no-repeat; 
+  text-align: left; 
+  direction: ltr; 
+  *line-height: 0; 
+}
+.ir br { 
+  display: none; 
+}
+.iir { 
+  display: inline-block;
+  vertical-align: top;
+  position: relative; 
+  border: 0; 
+  text-indent: -999em; 
+  overflow: hidden; 
+  background-color: transparent; 
+  background-repeat: no-repeat; 
+  text-align: left; 
+  direction: ltr; //*line-height: 0; *display: inline; *zoom: 1;
+} 
+
+

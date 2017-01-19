@@ -1,0 +1,52 @@
+// Typography
+$font-primary: "Proxima Nova", sans-serif;
+$font-family-sans-serif: $font-primary; // for BS
+$font-secondary: Georgia, Times, "Times New Roman", serif;
+//$font-tertiary: 'Bebas Neue W01';
+
+// Colors
+$text-color: #424242;
+
+$brand-primary:         #0097d9;
+$brand-primary-dark:    $brand-primary;
+$brand-secondary:       #283748;
+$brand-secondary-dark:  $brand-secondary;
+$brand-secondary-alt:   #3B5169;
+$brand-tertiary:        #5694DF;
+
+$brand-success:         #4FA75D;
+$brand-info:            #5bc0de;
+$brand-warning:         #f0ad4e;
+$brand-danger:          #d9534f;
+$gray-lighter:          #B0B4BA;
+$gray-light:            #D7DCE1;
+$gray:                  #3D3D3D;
+$gray-dark:             #555;
+$black:                 #000000;
+$white:                 #ffffff;
+
+
+
+$state-success-text: $brand-success;
+$state-info-text: $brand-warning;
+$state-warning-text: $brand-warning;
+$state-danger-text: $brand-danger;
+
+$btn-default-color:              #696969 !default;
+$btn-default-bg:                 #000;
+$btn-default-border:             #5694DF;
+
+// General
+$page-header-border-color: transparent;
+$nav-link-hover-bg: transparent;
+
+// Layout
+$grid-float-breakpoint: 992px; // never hide humbugur
+$sidebar-width: 300px;
+
+// Type
+//$headings-font-family: "Lato", sans-serif;
+$headings-font-weight: 300;
+
+$font-size-base: 16px;
+$font-size-h4: 18px;

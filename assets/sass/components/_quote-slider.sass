@@ -1,0 +1,44 @@
+.quote-slider
+  background-color: #1e1e1e
+
+.quote-slide
+  /* Center slide text vertically */
+  display: flex
+  justify-content: center
+  flex-direction: column
+  padding: 45px 0 110px
+  background-color: #1e1e1e
+  color: white
+
+
+.quote-text
+  padding-left: 150px
+  position: relative
+  color: white
+  font-weight: 600
+  font-size: 17.5px
+
+  &::before
+    display: block
+    content: "“"
+    position: absolute
+    top: 0
+    left: 0
+    color: $brand-primary
+    font-size: 240px
+    font-family: "Times New Roman", serif
+    letter-spacing: ps-ls-em(-50)
+    line-height: 150px
+
+.quote-by
+  display: block
+  margin-top: 15px
+  color: $brand-primary
+  font-size: 18px
+  text-align: right
+  font-family: $font-secondary
+  font-style: italic
+
+  &::before
+    display: inline-block
+    content: '—'

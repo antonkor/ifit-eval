@@ -1,0 +1,102 @@
+/* Typography */
+@font-face {
+	font-family: 'Proxima Nova';
+	src: url('subset-ProximaNova-Bold.eot');
+	src: url('subset-ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/subset-ProximaNova-Bold.woff') format('woff'),
+		url('../fonts/subset-ProximaNova-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Proxima Nova';
+	src: url('subset-ProximaNova-Regular.eot');
+	src: url('subset-ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/subset-ProximaNova-Regular.woff') format('woff'),
+		url('../fonts/subset-ProximaNova-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+html, html a {
+  @include font-smoothing();
+}
+
+body {
+
+}
+
+p {
+  font-size: 17.5px;
+}
+
+// Reset links
+a:hover, a:focus {
+  text-decoration: none;
+}
+
+blockquote {
+
+}
+
+
+// General heading style
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  //color: #4C5463;
+}
+
+
+// Font sizes
+.h1 {
+  font-size: 28px;
+  text-transform: uppercase;
+}
+.h2 {
+  font-size: 24px;
+  text-transform: uppercase;
+}
+.h3 {
+  font-size: 34px;
+  font-weight: 500;
+  letter-spacing: ps-ls-em(-30);
+}
+.h4 {
+
+}
+@include mq(tablet-up) {
+  .h1 {
+    font-size: 48px;
+  }
+  .h2 {
+    font-size: 38px;
+  }
+  .h3 {
+
+  }
+  .h4 {
+
+  }
+}
+@include mq(desktop-up) {
+  .h1 {
+    font-size: 68px;
+  }
+  .h2 {
+    font-size: 48px;
+  }
+  .h3 {
+
+  }
+  .h4 {
+
+  }
+}
+
+
+// Heading styles
+.heading-fancy {
+
+}

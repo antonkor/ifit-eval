@@ -1,0 +1,153 @@
+extends ./templates/_main.pug
+block pageVariables
+  -var bodyClass = "template-main home";
+  -var activeMenuItem = 'Home';
+
+block pageMeta
+  meta(title="iFit Eval")
+
+block pageHeadEnd
+  link(rel="stylesheet" href="assets/css/page-home.css")
+
+
+block pageNav
+  div.section-header
+    div.section-heading Weight Loss
+    ul.nav.list-inline.section-nav
+      li
+        a(href="#") Overview
+      li
+        a(href="#") Features
+      li.active
+        a(href="#") Programs
+      li
+        a(href="#") Training
+      li.search-wrap
+        label.search-icon(for='search')
+        div.search-input-wrap
+          input#search.search-input(type='text', placeholder='Search')
+          span.search-close
+
+
+
+block pageBody
+  div.hero-wrap
+    div.hero-bg(style="background-image: url(assets/img/hero-bg.jpg)")
+    div.container
+      div.hero-inner
+        h1.hero-heading working out <br> has never been so fun
+        p.hero-text Welcome to the center of it all. The Fitness Shop presents you with hundreds of workout programs designed to guide your weight loss journey.
+
+  div.page-body
+    div.container
+
+      div.row.mt-20.mb-40
+        div.col-xs-12.text-center
+          h3.h3.mb-20 Weight Loss
+          p.max-xs Welcome to the center of it all. The Fitness Shop presents you with hundreds of workout programs designed to guide your weight loss journey.
+
+      div.cards-wrapper.row
+        div.card-wrap.col-sm-3.col-xs-6
+            .card-img
+              img(src="assets/img/cards/01.jpg" alt="")
+            div.card-caption
+              h3.card-heading Get Fit with Jillian Michaels
+              i.card-tag weight loss
+        div.card-wrap.col-sm-3.col-xs-6
+          .card-img
+            img(src="assets/img/cards/02.jpg" alt="")
+          div.card-caption
+            h3.card-heading Grand Canyon
+            i.card-tag incline trainer
+        div.card-wrap.col-sm-3.col-xs-6
+          .card-img
+            img(src="assets/img/cards/03.jpg" alt="")
+          div.card-caption
+            h3.card-heading Power Walk
+            i.card-tag walking
+        div.card-wrap.col-sm-3.col-xs-6
+          .card-img
+            img(src="assets/img/cards/04.jpg" alt="")
+          div.card-caption
+            h3.card-heading Elliptical Weight Loss
+            i.card-tag weight loss
+        div.card-wrap.col-sm-3.col-xs-6
+          .card-img
+            img(src="assets/img/cards/05.jpg" alt="")
+          div.card-caption
+            h3.card-heading Off Season Weight Loss
+            i.card-tag cycling
+        div.card-wrap.col-sm-3.col-xs-6
+          .card-img
+            img(src="assets/img/cards/06.jpg" alt="")
+          div.card-caption
+            h3.card-heading Central Park
+            i.card-tag fitness
+        div.card-wrap.col-sm-3.col-xs-6
+          .card-img
+            img(src="assets/img/cards/07.jpg" alt="")
+          div.card-caption
+            h3.card-heading 5K Beginner Training
+            i.card-tag running
+        div.card-wrap.col-sm-3.col-xs-6
+          .card-img
+            img(src="assets/img/cards/08.jpg" alt="")
+          div.card-caption
+            h3.card-heading Going Costal
+            i.card-tag running
+        div.card-wrap.col-sm-3.col-xs-6
+          .card-img
+            img(src="assets/img/cards/03.jpg" alt="")
+          div.card-caption
+            h3.card-heading Elliptical Weight Loss
+            i.card-tag weight loss
+        div.card-wrap.col-sm-3.col-xs-6
+          .card-img
+            img(src="assets/img/cards/09.jpg" alt="")
+          div.card-caption
+            h3.card-heading Incline Train
+            i.card-tag incline trainer
+        div.card-wrap.col-sm-3.col-xs-6
+          .card-img
+            img(src="assets/img/cards/10.jpg" alt="")
+          div.card-caption
+            h3.card-heading Paris
+            i.card-tag running
+        div.card-wrap.col-sm-3.col-xs-6
+          .card-img
+            img(src="assets/img/cards/02.jpg" alt="")
+          div.card-caption
+            h3.card-heading Lose Weight with Jillian Michaels
+            i.card-tag weight loss
+
+
+        div.col-xs-12.text-center.mb-50.pb-20
+          a.btn.btn-primary.btn-lg(href="#") View More
+
+    div.quote-slider
+      div.container
+        div.row
+          .swiper-container
+            .swiper-wrapper
+              .quote-slide.swiper-slide
+                p.quote-text To date I have lost 14 Kilos (30 pounds) and my fitnes level is at least the same as when I was actively engaged in sport (if not better), thanks to iFit and the range and variation of fitness programs available.
+                span.quote-by Graham Lambourne
+              .quote-slide.swiper-slide
+                .max-lg
+                  p.quote-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                  span.quote-by John Smith
+              .quote-slide.swiper-slide
+                .max-sm
+                  p.quote-text Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  span.quote-by Jillian Michaels
+            // Add Pagination
+            .swiper-pagination
+
+
+
+
+
+      block pageFooterScripts
+
+    div.container.text-center.mt-15.mb-25
+      h3.h3 Get started on your weight loss journey. <a href="#" class="btn btn-primary btn-inline btn-lg ml-20">Join iFit Today</a>

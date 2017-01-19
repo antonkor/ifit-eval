@@ -1,0 +1,310 @@
+// Fonts
+@mixin font-smoothing() {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+@mixin font($font-family, $font-weight) {
+  font-family: $font-family;
+  font-weight: $font-weight;
+}
+@mixin icon-font() {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Photoshop letterspacing to ems or pixels
+@function ps-ls-em($val) {
+  @return ( $val / 1000 ) * 1em;
+}
+@function ps-ls-px($val, $font-size) {
+  @return ( $val * $font-size / 1000 ) * 1px;
+}
+
+
+// Flex Properties
+@mixin flexbox() {
+  display: -webkit-box !important;
+  display: -moz-box !important;
+  display: -ms-flexbox !important;
+  display: -webkit-flex !important;
+  display: flex !important;
+}
+@mixin align-items($value) {
+  -webkit-align-items: $value;
+  -moz-align-items: $value;
+  -ms-align-items: $value;
+  align-items: $value;
+}
+@mixin flex-grow($value) {
+  -webkit-flex-grow: $value;
+  -moz-flex-grow: $value;
+  -ms-flex-grow: $value;
+  flex-grow: $value;
+}
+@mixin flex-direction($value) {
+  -webkit-flex-direction: $value;
+  -moz-flex-direction: $value;
+  -ms-flex-direction: $value;
+  flex-direction: $value;
+}
+@mixin justify-content($value) {
+  -webkit-justify-content: $value;
+  -moz-justify-content: $value;
+  -ms-justify-content: $value;
+  justify-content: $value;
+}
+
+
+// Vertical align anything with css3
+@mixin va($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+// Use: @include vertical-align();
+
+
+// Display overrides
+@mixin display($type) {
+  @if $type == 'flex' {
+    .display-flex {
+      @include flexbox();
+    }
+  } @else {
+    .display-#{$type} {
+      display: #{$type} !important;
+    }
+  }
+}
+@mixin display-xs($type) {
+  @if $type == 'flex' {
+    .display-xs-flex {
+      @include flexbox();
+    }
+  } @else {
+    .display-xs-#{$type} {
+      display: #{$type} !important;
+    }
+  }
+}
+@mixin display-sm($type) {
+  @if $type == 'flex' {
+    .display-sm-flex {
+      @include flexbox();
+    }
+  } @else {
+    .display-sm-#{$type} {
+      display: #{$type} !important;
+    }
+  }
+}
+@mixin display-md($type) {
+  @if $type == 'flex' {
+    .display-md-flex {
+      @include flexbox();
+    }
+  } @else {
+    .display-md-#{$type} {
+      display: #{$type} !important;
+    }
+  }
+}
+@mixin display-lg($type) {
+  @if $type == 'flex' {
+    .display-lg-flex {
+      @include flexbox();
+    }
+  } @else {
+    .display-lg-#{$type} {
+      display: #{$type} !important;
+    }
+  }
+}
+
+
+// Spacing overrides
+@mixin no-padding($side) {
+  @if $side == 'all' {
+    .no-padding {
+      padding: 0 !important;
+    }
+  } @else {
+    .no-padding-#{$side} {
+      padding-#{$side}: 0 !important;
+    }
+  }
+}
+@mixin no-margin($side) {
+  @if $side == 'all' {
+    .no-margin {
+      margin: 0 !important;
+    }
+  } @else {
+    .no-margin-#{$side} {
+      margin-#{$side}: 0 !important;
+    }
+  }
+}
+
+
+// CSS3 animations
+@mixin animation-delay($delay) {
+  -webkit-animation-delay: $delay;
+  -moz-animation-delay: $delay;
+  -ms-animation-delay: $delay;
+  -o-animation-delay: $delay;
+  animation-delay: $delay;
+}
+@mixin animation-duration($delay) {
+  -webkit-animation-duration: $delay;
+  -moz-animation-duration: $delay;
+  -ms-animation-duration: $delay;
+  -o-animation-duration: $delay;
+  animation-duration: $delay;
+}
+
+// keyframes mixin
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+@mixin animation-name($name) {
+  -webkit-animation-name: $name;
+  -moz-animation-name: $name;
+  -o-animation-name: $name;
+  animation-name: $name;
+}
+
+
+
+// Media Queries
+@mixin mq($point, $width:'') {
+  @if $point == large-desktop-up {
+    @media (min-width: 1200px) { @content; }
+  }
+  @if $point == desktop-up {
+    @media (min-width: 992px) { @content; }
+  }
+  @if $point == desktop-only {
+    @media (min-width: 992px) and (max-width: 1199px) { @content; }
+  }
+  @else if $point == tablet-up {
+    @media (min-width: 768px) { @content; }
+  }
+  @else if $point == tablet-only {
+    @media (min-width: 768px) and (max-width: 991px) { @content; }
+  }
+  @else if $point == mobile-only {
+    @media (max-width: 767px) { @content; }
+  }
+  @else if $point == custom-min {
+    @media screen and (min-width: $width)  { @content; }
+  }
+  @else if $point == custom-max {
+    @media screen and (max-width: $width)  { @content; }
+  }
+}
+
+@mixin large-desktop-up() { @media (min-width: 1200px) { @content; } }
+@mixin desktop-up() { @media (min-width: 992px) { @content; } }
+@mixin desktop-only() { @media (min-width: 992px) and (max-width: 1199px) { @content; } }
+@mixin tablet-up() { @media (min-width: 768px) { @content; } }
+@mixin tablet-only() { @media (min-width: 768px) and (max-width: 991px) { @content; } }
+@mixin mobile-only() { @media (max-width: 767px) { @content; } }
+@mixin custom-min($width: '') { @media screen and (min-width: $width)  { @content; } }
+@mixin custom-max($width: '') { @media screen and (max-width: $width)  { @content; } }
+
+
+// https://gist.github.com/eprothro/7309610 or
+// https://github.com/AdamBrodzinski/Retina-Sprites-for-Compass
+//@import "compass/utilities/sprites";         // Include compass sprite helpers
+//@import "compass/css3/background-size";      // Include helper to calc background size
+
+@mixin retina-sprite($sprites, $sprites2x, $name, $hover: false, $active: false) {
+  @include _retina-sprite($sprites, $sprites2x, $name, $hover, $active);
+}
+
+// The general purpose retina sprite mixin.
+  //
+  //    @include retina-sprite(name, $spritemap1, $spritemap2)
+  //    @include retina-sprite(name, $spritemap1, $spritemap2[, $dimensions: true, $pad: 0])
+  //
+  //    If `dimensions` is true, then width/height will also be set.
+  //
+  //    if `pad` is non-zero, then that's how much padding the element will have (requires
+  //    $spacing on the sprite maps). Great for iPhone interfaces to make hit areas bigger.
+  //
+@mixin _retina-sprite($sprites, $sprites2x, $name, $hover, $active, $dimensions: true, $pad: 0) {
+  @if $dimensions == true {
+    @include sprite-dimensions($sprites, $name);
+  }
+  background-image: sprite-url($sprites);
+  background-position: sprite-position($sprites, $name, -$pad, -$pad);
+  background-repeat: no-repeat;
+
+  @if $hover == true {
+    $name_hover: $name + _hover;
+    &:hover {
+      background-position: sprite-position($sprites, $name_hover, -$pad, -$pad);
+    }
+  }
+  @if $active == true {
+    $name_active: $name + _active;
+    &:active {
+      background-position: sprite-position($sprites, $name_active, -$pad, -$pad);
+    }
+  }
+
+  @if $pad > 0 {
+    padding: $pad;
+  }
+
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 1.5), (min-resolution: 2dppx) {
+    & {
+      $pos: sprite-position($sprites2x, $name, -$pad * 2, -$pad * 2);
+      background-image: sprite-url($sprites2x);
+      background-position: nth($pos, 1) / 2 nth($pos, 2) / 2;
+      @include background-size(ceil(image-width(sprite-path($sprites2x)) / 2) auto);
+      //  sprite-path() returns the path of the generated sprite sheet, which
+      //  image-width() calculates the width of. the ceil() is in place in case
+      //  you have sprites that have an odd-number of pixels in width
+
+      @if $hover == true {
+        $name_hover: $name + _hover;    // create myButton_hover and assign it
+        &:hover{
+          $pos: sprite-position($sprites2x, $name_hover, -$pad * 2, -$pad * 2);
+          background-position: nth($pos, 1) / 2 nth($pos, 2) / 2;
+        }
+      }
+      @if $active == true {
+        $name_active: $name + _active;    // create myButton_active and assign it
+        &:active{
+          $pos: sprite-position($sprites2x, $name_active, -$pad * 2, -$pad * 2);
+          background-position: nth($pos, 1) / 2 nth($pos, 2) / 2;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,85 @@
+doctype html
+html.no-js(lang='en')
+  block pageVariables
+
+  head
+    meta(charset="utf-8")
+    meta(name="robots", content="noindex,nofollow")
+
+    meta(http-equiv="X-UA-Compatible",content="IE=edge")
+    block pageMeta
+    meta(name="viewport",content="width=device-width, minimum-scale=1, maximum-scale=1")
+    link(rel="stylesheet" href="assets/css/bootstrap.css")
+    link(rel="stylesheet" href="assets/css/main.css")
+    block pageHeadEnd
+    script(src="assets/js/vendors/modernizr-2.6.2-respond-1.1.0.min.js")
+
+  body(class="#{bodyClass}")
+
+    header#page_header.page-header.fixed-header.animated.fadeIn
+
+      .global-nav-wrap
+        a.logo-brand(href="index.html")
+          img(src='assets/img/logo.png')
+
+        ul.nav.list-inline.global-nav
+          li
+            a(href="#") Login
+          li
+            a(href="#") Sign Up
+          li.menu-trigger
+            a(href="#") Menu
+              span.menu-icon
+                span
+
+      block pageNav
+
+    block pageBody
+
+    footer.page-footer.animated
+      div.clearfix
+        div.pull-left
+          ul.nav.list-inline.footer-nav
+            li
+              a(href="#") Blog+Video
+            li
+              a(href="#") Shop
+            li
+              a(href="#") Company
+            li
+              a(href="#") Press
+            li
+              a(href="#") Jobs
+            li
+              a(href="#") Support
+            li
+              a(href="#") Legal
+            li
+              a(href="#") Contact
+
+        div.pull-right
+          div.copy-wrap
+            span Copyright © iFit.com, All rights reserved.
+          div.lang-wrap.ml-10
+            span.lang-heading Language:
+            span.lang-selected English
+            span.carrot
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="./assets/js/vendors/jquery-1.10.2.min.js"><\/script>')</script>
+    <script src="./assets/js/vendors/bootstrap.min.js"></script>
+    block pageFooterScripts
+
+    <script src="./assets/js/plugins.js"></script>
+    <script src="./assets/js/plugins/swiper.min.js"></script>
+    <script src="./assets/js/global.js"></script>
+
+
+
+    //- <script data-main="assets/js/common" src="./assets/js/lib/require.min.js"></script>
+    //- script.
+    //-   require(['common'], function() {
+    //-     // Load the main app module to start the app
+    //-     require(['pages/home']);
+    //-   });

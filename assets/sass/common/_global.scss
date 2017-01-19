@@ -1,0 +1,32 @@
+/* Global Body */
+.page-body {
+  position: relative;
+  background: #fff;
+  margin-top: 627px;
+
+  .container {
+
+  }
+}
+
+.break-word {
+  display: inline-block;
+  word-wrap: break-word;
+}
+
+/* Global Styles */
+.content-section {
+
+}
+
+
+.theme-light {
+  background: white;
+}
+.theme-dark {
+  background: $gray-dark;
+}
+
+.bg-light-grey {
+  background-color: #E6E6E6;
+}
